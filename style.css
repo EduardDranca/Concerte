@@ -1,7 +1,21 @@
 body {
+    background-color: #d4d4d4;
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
+}
+
+#background-img {
+    max-height: 100vh;
+    min-height: 600px;
+    width: 100%;
+    z-index: 0;
+}
+
+.background-img-wrapper {
+    position: absolute;
+    top: 0;
+    width: 100%;
 }
 
 .centered-text {
@@ -9,9 +23,7 @@ body {
     display: flex;
     justify-content: center;
     left: 50%;
-    position: absolute;
     text-align: center;
-    transform: translateX(-50%);
 }
 
 .circle {
@@ -34,6 +46,11 @@ body {
     padding-top: 2rem;
 }
 
+#features {
+    background-color: white;
+    box-shadow: 0px 0px 10px #525252;
+}
+
 #find-concerts-button {
     background-color: #141947;
     color: #dcdcdc;
@@ -45,11 +62,9 @@ body {
     left: 50%;
     margin: auto;
     padding: 10px 20px 13px;
-    position: absolute;
     text-decoration: none;
-    top: 70%;
-    transform: translate(-50%, -50%);
     width: 250px;
+    z-index: 10;
 }
 
 #find-concerts-button:hover {
@@ -58,6 +73,7 @@ body {
 
 .full-width {
     width: 100%;
+    z-index: 10;
 }
 
 .heading {
@@ -67,11 +83,15 @@ body {
     text-align: center;
 }
 
+.helper {
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+
 .hidden-overflow {
-    max-height: 100vh;
-    min-height: 600px;
-    overflow-x: hidden;
-    overflow-y: hidden;
+    min-height: 100vh;
+    overflow: hidden;
 }
 
 .icon {
@@ -88,6 +108,17 @@ body {
     margin-right: auto;
     padding: 150px 0px;
     width: 80%;
+}
+
+#intro-text{
+    z-index: 10;
+}
+
+.intro-wrapper {
+  display: grid;
+  grid-template-rows: 70% 30%;
+  max-height: 100vh;
+  min-height: 600px;
 }
 
 .large-font {
@@ -125,6 +156,10 @@ body {
     font-size: 48px !important;
     height: 48px !important;
     width: 48px !important;
+}
+
+.padding-wrapper {
+    padding-top: 200px;
 }
 
 .slideshow-container {
