@@ -9,6 +9,7 @@ body {
     max-height: 100vh;
     min-height: 600px;
     width: 100%;
+    min-width: calc(2508px / 1672 * 600);
     z-index: 0;
 }
 
@@ -91,11 +92,6 @@ body {
   height: 100%;
   position: relative;
   width: 100%;
-}
-
-.hidden-overflow {
-    min-height: 100vh;
-    overflow: hidden;
 }
 
 .icon {
