@@ -5,6 +5,19 @@ body {
     margin: 0;
 }
 
+a, a:hover, a:active, a:visited, a:focus {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both
+}
+
 #background-img {
     max-height: 100vh;
     min-height: 600px;
@@ -27,6 +40,11 @@ body {
     text-align: center;
 }
 
+.change-location {
+    color: #707070;
+    font-size: 0.8rem;
+}
+
 .circle {
     background-color: #a1a1a1;
     border-radius: 100%;
@@ -35,15 +53,107 @@ body {
     width: 10px;
 }
 
+.concert-panel {
+    box-shadow: 0px 0px 5px #525252;
+    overflow: hidden;
+    position: relative;
+    height: 200px;
+    width: 200px;
+}
+
+.concert-panel-img {
+    height: 200px;
+}
+
+.concert-panel-info {
+    background-color: #dadada69;
+    height: 50px;
+    position: absolute;
+    text-align: center;
+    width: 200px;
+}
+
+.concert-panel-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    width: 100%;
+}
+
+.concerts-wrapper {
+    display: grid;
+    grid-template-columns: 240px auto;
+    min-height: 100vh;
+}
+
 .container-2cr {
     display: grid;
     grid-template-columns: 50% 50%;
 }
 
 .content {
-    color: #222222;
+    color: #626262;
     font-size: 1.25rem;
     text-align: center;
+}
+
+.distance-slider {
+    -webkit-appearance: none;
+    appearance: none;
+    border: 1px solid #a0a0a0;
+    border-radius: 8px;
+    height: 8px;
+    outline: none;
+}
+
+.distance-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    background: white;
+    border: 1px solid #a0a0a0;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+}
+
+.distance-slider::-moz-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    background: white;
+    border: 1px solid #a0a0a0;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+}
+
+
+#filter-button {
+    background-color: #141947;
+    border-radius: 4px;
+    color: #dcdcdc;
+    float: right;
+    font-weight: 400;
+    margin: auto;
+    padding: 6px 10px;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+
+#filter-button:hover {
+    cursor: pointer;
+}
+
+.filters {
+    color: black;
+    padding-top: 40px;
+    text-align: left;
+}
+
+.filter-heading {
+    display: block;
+    padding-bottom: 10px;
 }
 
 #find-concerts-button {
@@ -135,6 +245,30 @@ body {
     cursor: pointer;
 }
 
+.main-panel {
+    background-color: white;
+    border-top: 5px solid #1f276f;
+    box-shadow: 0px 0px 10px #525252;
+    height: calc(100% - 105px);
+    margin-top: 100px;
+    padding-left: 100px;
+    padding-right: 100px;
+    z-index: 1;
+}
+
+.main-panel-body {
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    min-width: 700px;
+}
+
+.main-panel-header {
+    align-items: center;
+    display: flex;
+    height: 100px;
+    justify-content: flex-end;
+}
+
 .material-icons.md-18 {
     font-size: 18px !important;
     height: 18px !important;
@@ -156,8 +290,68 @@ body {
     width: 48px !important;
 }
 
+.filter-content {
+    color: #707070;
+    font-size: 0.9rem;
+}
+
+.padding {
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
 .padding-wrapper {
     padding-top: 200px;
+}
+
+.price-input {
+    -moz-appearance: textfield;
+    color: #707070;
+    margin: 2px 0px 2px;
+    outline: none;
+    width: 2rem;
+}
+
+.price-input::-webkit-outer-spin-button,
+.price-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
+.search-bar {
+    border: 1px solid #a8a8a8;
+    color: #1a1a1a;
+    padding-left: 10px;
+    float: right;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+    font-style: italic;
+    height: 2rem;
+    width: 300px;
+}
+
+.separator {
+    border-top: 1px solid #a8a8a8;
+}
+
+.sidebar {
+    background-color: white;
+    box-shadow: 0px 0px 10px #525252;
+    color: black;
+    display: inline-block;
+    min-height: calc(100% - 160px);
+    padding: 80px 20px 80px;
+    text-align: center;
+    width: 200px;
+    z-index: 2;
+}
+
+.slider-container {
+    display: grid;
+    grid-template-columns: 75% 25%;
+    line-height: 100%;
+    text-align: right;
 }
 
 .slideshow-content {
@@ -198,7 +392,7 @@ body {
     background-color: white;
     box-shadow: 0px 0px 10px #525252;
     padding: 200px 0px 200px 0px;
-    border-top: 5px solid hsl(234, 56%, 28%);
+    border-top: 5px solid #1f276f;
 }
 
 .wrapper {
@@ -232,4 +426,70 @@ body {
         grid-template-columns: 100%;
         grid-template-rows: 50% 50%;
     }
+}
+
+@-webkit-keyframes fade-in-bottom {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(-50px);
+        transform: translateY(-50px);
+    }
+}
+
+@keyframes fade-in-bottom {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(0px);
+        -ms-transform: translateY(0px);
+        transform: translateY(0px);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(-50px);
+        -ms-transform: translateY(-50px);
+        transform: translateY(-50px);
+    }
+}
+
+@-webkit-keyframes fade-out-bottom {
+    0% {
+        opacity: 1;
+        -webkit-transform: translateY(-50px);
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px);
+    }
+}
+
+@keyframes fade-out-bottom {
+    0% {
+        opacity: 1;
+        -webkit-transform: translateY(-50px);
+        -ms-transform: translateY(-50px);
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: translateY(0px);
+        -ms-transform: translateY(0px);
+        transform: translateY(0px);
+    }
+}
+
+.fade-in-bottom {
+    -webkit-animation-name: fade-in-bottom;
+    animation-name: fade-in-bottom;
+}
+
+.fade-out-bottom {
+    -webkit-animation-name: fade-out-bottom;
+    animation-name: fade-out-bottom;
 }
